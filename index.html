@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourradar Travels</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style1.css">
+
+</head>
+<body>
+
+<header>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+    <marquee behavior="scroll" direction="right" style="width:250px;  " scrollamount="12">
+    <a href="#" class="logo" style="text-transform: lowercase;"><span>T</span>ourradar <sup style="font-size: 10px;">tm</sup></a>
+    </marquee>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#book">book</a>
+        <a href="#packages">packages</a>
+        <a href="#services">services</a>
+        <a href="#gallery">gallery</a>
+        <a href="#contact">contact</a>
+
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-search" id="search-btn"></i>
+        <i class="fas fa-user" id="login-btn"></i>
+    </div>
+
+    <form action="" class="search-bar-container">
+        <input type="search" id="search-bar" placeholder="search here...">
+        <label for="search-bar" class="fas fa-search"></label>
+    </form>
+
+</header>
+
+<div class="login-form-container">
+
+    <i class="fas fa-times" id="form-close"></i>
+
+    <form action="">
+        <h3>login</h3>
+        <input type="email" class="box" placeholder="enter your email">
+        <input type="password" class="box" placeholder="enter your password">
+        <input type="submit" value="login now" class="btn">
+        <input type="checkbox" id="remember">
+        <label for="remember">remember me</label>
+        <p>forget password? <a href="#">click here</a></p>
+        <p>don't have and account? <a href="#">register now</a></p>
+    </form>
+
+</div>
+
+<section class="home" id="home">
+
+    <div class="content">
+        <h3>TRAVEL WITH TOURRADAR</h3>
+        <p>FLEXIBLE & RISK-FREE</p>
+        <P>Tour & Experience Incredible Destinations</P>
+        
+    </div>
+
+    <div class="controls">
+        <span class="vid-btn active" data-src="images/vid-2.mp4"></span>
+        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
+        
+        <span class="vid-btn" data-src="images/vid-1.mp4"></span>
+    </div>
+
+    <div class="video-container">
+        <video src="images/vid-2.mp4" id="video-slider" loop autoplay muted></video>
+    </div>
+
+</section>
+
+
+<section class="book" id="book">
+
+    <h1 class="heading">
+        <span>b</span>
+        <span>o</span>
+        <span>o</span>
+        <span>k</span>
+        <span class="space"></span>
+        <span>n</span>
+        <span>o</span>
+        <span>w</span>
+    </h1>
+
+    <div class="popap" id="popap-1">
+        <div class="overlay"></div>
+        <div class="content">
+            <div class="close-btn" onclick="togglepopup()">&times;</div>
+            <p id="cpara">Booking Confirmed,Enjoy your tour</p>
+        </div>
+    </div> 
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/book-img.jpg" alt="">
+        </div>
+
+        <form action="#book">
+            <div class="inputBox">
+                <h3>where to</h3>
+
+                <select id="cars" name="cars" onclick="pric()" >
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Paris">Paris</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="Maldeev">Maldeev</option>
+                    <option value="US">US</option>
+                  </select>
+            </div>
+            <div class="inputBox" oninput="pric()">
+                <h3>how many</h3>
+                <input type="number" id="pepole" min="1" placeholder="number of guests" >
+            </div>
+            <div class="inputBox">
+                <h3>Prices</h3>
+                <input type="text" id="tprice" name="tprice" placeholder="0" disabled>
+            </div>
+            <div class="inputBox">
+                <h3>arrivals</h3>
+                <input type="date" name="setTodaysDate" id="checkIn" name="checkIn" onchange="myfunc()">
+            </div>
+            <div class="inputBox">
+                <h3>leaving</h3>
+                <input name="setTodaysDate" type="date" >
+            </div>
+
+            
+
+            <button class="btn" onclick="togglepopup()" >book now</button>
+        </form>
+
+        
+        
+
+    </div>    
+
+    
+
+     
+
+</section>  
+
+
+
+<section class="packages" id="packages">
+
+    <h1 class="heading">
+        <span>p</span>
+        <span>a</span>
+        <span>c</span>
+        <span>k</span>
+        <span>a</span>
+        <span>g</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+    <h3 class="deals">Special Deals And<br>
+        Last Minute Amazing Offers</h3>
+        <br>
+    <div class="box-container">
+        
+
+        <div class="box">
+            <img src="images/p-1.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> mumbai </h3>
+                <p>Royalty, romance and the captivating energy of Mumbai are the highlights along this journey across India.
+                    Mumbai is truly the spirit of all that is India. </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="price">Prices From $980.00 </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-2.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Germany </h3>
+                <p style="text-transform: none;">See all the sights on this jam-packed Best of Germany trip.
+                    From cutting-edge Berlin, you'll travel back in time and enjoy a medieval banquet in a castle </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">Prices From  $850.00  </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-3.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> Maldives </h3>
+                <p>A Maldives holiday offers you the chance to wiggle your toes in the pristine white 
+                     toss them between your feet . </p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">Prices From  $400.00  </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-4.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> paris </h3>
+                <p>If there is a place in the world that has been described with thousand adjectives in 
+                    numerous times, undoubtedly that place is Paris,</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price">Prices From  $720.00 </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-5.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> tokyo </h3>
+                <p>Tokyo has a reputation as one of the world’s safest and most exciting travel destinations,
+                     but there are some things every first-timer needs to know.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Prices From  $690.00 </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+        <div class="box">
+            <img src="images/p-6.jpg" alt="">
+            <div class="content">
+                <h3> <i class="fas fa-map-marker-alt"></i> eypt </h3>
+                <p>Egypt is the most populous country in the Arab world.
+                    Egypt is known for the Great Pyramids of Giza, the greatest royal tombs ever built.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                </div>
+                <div class="price"> Prices From  $500.00 </div>
+                <a href="#book" class="btn">book now</a>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="services" id="services">
+
+    <h1 class="heading">
+        <span>s</span>
+        <span>e</span>
+        <span>r</span>
+        <span>v</span>
+        <span>i</span>
+        <span>c</span>
+        <span>e</span>
+        <span>s</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-hotel"></i>
+            <h3>Adventure tours</h3>
+            <p>Adventure tourism is about connecting with a new culture or a new landscape and 
+                being physically active at the same time.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-utensils"></i>
+            <h3>food and drinks</h3>
+            <p>Delicious Indian Meals, Breakfast, Lunch, Dinner -all Meals Included.
+                Lots of Extra Toppings like Ice cream, soft drinks... etc.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-bullhorn"></i>
+            <h3>Hotel booking</h3>
+            <p>Best Quality Hotels which are appreciated by traveled guests.
+                Comfortable AC Luxury Coaches, Maximum sightseeing included.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-globe-asia"></i>
+            <h3>around the world</h3>
+            <p>Lots of Entertainment on tour, hassle-free travel.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-plane"></i>
+            <h3>Safe and fastest travel</h3>
+            <p>Professional & Caring Tour Leader throughout the tour.
+                Thousands of Satisfied Tourists year after year, every year.</p>
+        </div>
+        <div class="box">
+            <i class="fas fa-hiking"></i>
+            <h3>in Budget</h3>
+            <p>
+                Tours suitable for Every Budget, starting from 5 thousand to 10 lakh.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="gallery" id="gallery">
+
+    <h1 class="heading">
+        <span>g</span>
+        <span>a</span>
+        <span>l</span>
+        <span>l</span>
+        <span>e</span>
+        <span>r</span>
+        <span>y</span>
+    </h1>
+
+    <div class="box-container">
+
+        <div style="transition: transform .2s;" class="box">
+            <img  src="images/g-1.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-2.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-3.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-4.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-5.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-6.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        <div class="box">
+            <img src="images/g-7.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+                
+            </div>
+        </div>
+        
+        <div class="box">
+            <img src="images/g-8.jpg" alt="">
+            <div class="content">
+                <h3>amazing places</h3>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h1 class="heading">
+        <span>c</span>
+        <span>o</span>
+        <span>n</span>
+        <span>t</span>
+        <span>a</span>
+        <span>c</span>
+        <span>t</span>
+    </h1>
+    <div id="msgbox"> Message Succssfully Sent</div>
+
+    <div class="row">
+        <form   action="#contact">
+            <div class="inputBox">
+                <input id="row1" type="text" placeholder="name">
+                <span id="nameerror" class="validate" ></span>
+            </div>
+
+        <div  class="inputBox">
+                <input id="row2" type="email" placeholder="email" >
+            <span id="mailerror" class="validate"></span>
+        </div>
+
+            <div class="inputBox">
+                <input id="row3" type="number" placeholder="number">
+                <span id="numbererror" class="validate"></span>
+
+            </div>
+            <textarea id="row5" placeholder="message" name="" id="" cols="30" rows="10" required></textarea>
+            <input type="submit" id="btn1" class="btn" value="send message" onclick="con()">
+        </form>
+        
+        
+</section>
+<!-- contact section ends -->
+<!-- footer section  -->
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Best Domestic Tour Operator by Today's Traveller Awards "India's Most Valuable Travel Destination Company" </p>
+        </div>
+       
+        
+        <div class="box">
+            <h3>follow us</h3>
+            
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+        </div>
+
+    </div>
+
+    <h1 class="credit"> created by <span style="color: rgb(247, 91, 122);">Mr.Onkar Bagade </span> | all rights reserved! </h1>
+</section>
+
+<button onclick="topFunction()" id="myBtn" >
+    <abbr title="go to top">
+         <i class="fas fa-arrow-up"></i>
+    </abbr>
+   
+</button>
+<script src="js/script1.js" defer></script>
+
+
+
+
+
+</body>
+</html>
